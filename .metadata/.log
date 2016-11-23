@@ -1,0 +1,42 @@
+!SESSION 2016-11-23 17:16:51.114 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/cocav/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/cocav/Desktop/Java_DEMO/Java-Demo -product org.eclipse.epp.package.java.product -keyring /Users/cocav/.eclipse_keyring
+
+!ENTRY org.eclipse.jface 2 0 2016-11-23 17:20:46.899
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-11-23 17:20:46.899
+!MESSAGE A conflict occurred for COMMAND+W:
+Binding(COMMAND+W,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@35595f1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+W,
+	ParameterizedCommand(Command(org.eclipse.ui.cocoa.closeDialog,Close Dialog,
+		Closes the active Dialog,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@81ba0c5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2016-11-23 17:23:55.228
+!MESSAGE Updating the index from remote failed. ; version: 2.0.1.v20160605-1811
+!STACK 0
+java.io.EOFException: Unexpected end of ZLIB input stream
+	at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:240)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+	at java.util.zip.ZipInputStream.read(ZipInputStream.java:194)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at com.google.common.io.ByteStreams.copy(ByteStreams.java:169)
+	at com.google.common.io.ByteSink.writeFrom(ByteSink.java:134)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.Zips.unzip(Zips.java:82)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:294)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

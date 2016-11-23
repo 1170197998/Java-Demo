@@ -1,0 +1,24 @@
+package com.ShaoFeng;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+public class Demo1 {
+
+	public static void main(String[] args) {
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		JSONObject jsonObjectArray = new JSONObject();
+		
+		try {
+			jsonObjectArray.put("item1", "value1");
+			jsonObjectArray.put("item2", "value2");
+			jsonArray.put(jsonObjectArray);
+			jsonObject.put("rows", jsonArray);
+			System.out.println(jsonObject.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

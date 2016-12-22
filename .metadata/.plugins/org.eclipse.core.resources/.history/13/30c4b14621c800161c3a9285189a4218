@@ -1,0 +1,75 @@
+package com.shaofeng;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class ArrayUser {
+
+	public static void main(String[] args) {
+		
+		ArrayUser arrayUser = new ArrayUser();
+		arrayUser.arrayUse();
+	}
+	
+	public void arrayUse() {
+		
+		//数组的两种声明方式:
+		int array1[];
+		int[] array2;
+		
+		//数组的两种初始化形式:
+		int array3[] = new int[]{1,2,3,4,5,6,7,8,9};
+		int[] array4 = {1,4,7,2,5,8,3,6,9};
+		
+		//遍历数组1:
+		for (int i = 0; i < array3.length; i ++) {
+			//System.out.println(array3[i]);
+		}
+		//遍历数组2:
+		for (int x: array4) {
+			//System.out.println(x);
+		}
+		
+		//填充数组全部元素
+		//Arrays.fill(array3, 10);
+		for (int i = 0;i < array3.length; i ++) {
+			//System.out.println(array3[i]);
+		}
+		
+		//用指定元素填充数组指定元素
+		//Arrays.fill(array3,1,4,20); 
+		for (int i = 0;i < array3.length; i ++) {
+			//System.out.println(array3[i]); 
+		}
+		
+		//排序数组内所有元素
+		//Arrays.sort(array3);
+		for (int i = 0;i < array3.length; i ++) {
+			//System.out.println(array3[i]);
+		}
+		
+		//排序数组内制定元素
+		//Arrays.sort(array3,1,5);
+		for (int i = 0; i < array3.length;i ++) {
+			//System.out.println(array3[i]);
+		}
+		
+		//复制数组然后赋值给别的数组
+		array1 = Arrays.copyOf(array3, 5);
+		for (int i = 0; i < array1.length;i ++) {
+			//System.out.println(array1[i]);
+		}
+		
+		//复制数组指定区间内元素然后赋值给别的数组
+		array2 = Arrays.copyOfRange(array3, 1,8);
+		for (int i = 0; i < array2.length;i ++) {
+			System.out.println(array2[i]);
+		}
+		
+		//检查数组是否包含一个值
+	    boolean a =	Arrays.asList(array3).contains(5);
+		System.out.println(a);
+		
+	}
+
+}
